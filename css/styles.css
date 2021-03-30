@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author Louna Parron louna.parron@gmail.com
  *
  * TABLE DES MATIERES
  * Normalize
@@ -36,12 +36,44 @@
 /* Mise en page
    ========================================================================== */
 @import url(_form.css);
+
+/*base pour le départ*/
+body{
+    background: linear-gradient(#c6f1c6, #f0f5f0);
+}
+main{
+    background-color: white;
+    box-shadow: 2px 2px 20px;
+}
 form{
-    background-color: #e9e9e9;
+    margin-top: 90px;
 }
 fieldset{
     border-radius: 10px;
 }
+footer{
+    text-align: center;
+}
+h1{
+    margin-left: var(--margin);
+}
+.paragraphe{
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+
+/*sépare le form en 2 sections*/
+.partie1{
+    background-color: var(--couleur-fond);
+    border: none;
+}
+.partie2{
+    margin-top:10px;
+    background-color: var(--couleur-fond);
+    border: none;
+}
+
+
 .nomcomplet .rangee,
 .tel .rangee,
 .date .rangee{
@@ -50,6 +82,70 @@ fieldset{
     align-items: stretch;
     flex-wrap: wrap;
 }
-.nomcomplet .cols_6_de_12{
+.nomcomplet .cols_4_de_12{
     width: 49%;
 }
+
+
+select,
+input {
+display:flex;
+
+}
+fieldset .date,
+fieldset .nomcomplet,
+fieldset .tel,
+fieldset .monuments{
+    border: 2px solid black;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+select
+{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/*intéractivité*/
+:focus {
+    outline : #349194 auto 5px;
+}
+input[type=radio] + label {
+    -webkit-filter: grayscale(100%);
+}
+input[type=radio]:hover + label,
+input[type=radio]:focus + label {
+    -webkit-filter: grayscale(0%);
+}
+input[type=radio]:checked + label img
+{
+    border: 2px solid black;
+}
+
+/*listes*/
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+    img{
+        width: 100%;
+    }
+    @media(min-width: 600px){
+    li{
+        text-align: center;
+    }}
+
+
+button{
+    background-color: #c6f1c6;
+    height: 40px;
+    border-radius: 1rem;
+}
+
+
+
